@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Agendamento Petshop</title>
+</head>
+
+<body>
+
+<h2>Agendamento de Banho e Tosa</h2>
+
+<form>
+
+<p>
+<label>Seu nome:</label><br>
+<input type="text" name="cliente" required>
+</p>
+
+<p>
+<label>Nome do pet:</label><br>
+<input type="text" name="pet" required>
+</p>
+
+<p>
+<label>Tipo de serviço:</label><br>
+<select name="servico" required>
+<option value="">Selecione</option>
+<option value="banho_tosa">Banho e Tosa</option>
+<option value="tosa_higienica">Tosa Higiênica</option>
+<option value="tosa_completa">Tosa Completa</option>
+</select>
+</p>
+
+<p>
+<label>Escolha a data:</label><br>
+<input type="date" name="data" required>
+</p>
+
+<p>
+<label>Escolha o horário:</label><br>
+<input type="time" name="hora" required>
+</p>
+
+<p>
+<button type="submit">Agendar Horário</button>
+</p>
+
+</form>
+
+</body>
+</html>
