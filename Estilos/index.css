@@ -1,0 +1,15 @@
+
+:root {
+    --cor-primaria: #35b355;   /* substitua pela cor do seu projeto */
+    --cor-acento:   #97d3a4;
+    --espaco-md:   25px;
+}
+
+* {
+    margin: 10;
+    padding: 100;
+    box-sizing: border-box;
+}
+body{
+    background: var(--cor-acento);
+}

@@ -1,0 +1,57 @@
+/* Configurações Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9f7;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #4a7a5d;
+}
+
+/* Estilização dos Rótulos (Labels) */
+label {
+    font-weight: bold;
+    color: #4a7a5d;
+}
+
+/* Estilização dos Campos (Input e Select) */
+input, select {
+    width: 50%;
+    padding: 8px; /* Ajustado para melhor respiro */
+    border: 2px solid #68a581;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgb(138, 196, 171);
+    color: #1d3528; /* Cor do texto interna */
+    margin-top: 5px;
+    outline: none;
+}
+
+/* Efeito ao clicar no campo */
+input:focus, select:focus {
+    background-color: #a5dac4;
+    border-color: #4a7a5d;
+}
+
+/* Estilização do Botão */
+button {
+    background-color: #68a581;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #4a7a5d;
+}
+
+  
+    
+ 
