@@ -1,23 +1,112 @@
-input, select, textarea {
-    width: 80%;
-    padding: 5px 5px;
-    border: 2px solid #68a581;
-    border-radius: 5px;
-    font-size: 1rem;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-input:focus {
-    outline: rgb(73, 58, 211);
-    border-color: var(--cor-acento);
-}
+/* Corpo */
 body {
-    background-color: rgb(138, 196, 171);
-    font-family: "Google Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 50;
-    font-style: normal;
-    font-variation-settings: "GRAD" 50;
-    color:rgb(9, 66, 21);
-    padding: 1;
-    margin:5;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    background-color: #fff;
+    max-width: 480px;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Campos */
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botões */
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botão cadastrar */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Botão limpar */
+button[type="reset"] {
+    background-color: #ccc;
+}
+
+/* Hover */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Cabeçalho */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 19px;
+}
+
+/* Células */
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Linhas alternadas */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Linha ao passar o mouse */
+tr:hover {
+    background-color: #f1f1f1;
 }

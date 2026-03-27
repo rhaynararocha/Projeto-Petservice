@@ -1,15 +1,31 @@
-
 :root {
-    --cor-primaria: #35b355;   /* substitua pela cor do seu projeto */
-    --cor-acento:   #97d3a4;
-    --espaco-md:   25px;
+  /* Definição de variáveis */
+  --cor-primaria: #7c9718;
+  --cor-fundo: #e7f3ecde;
+  --tamanho-fonte: 30px;
 }
 
-* {
-    margin: 10;
-    padding: 100;
+body {
+  /* Uso das variáveis */
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
+  font-size: var(--tamanho-fonte);
+  font-family: 'Arial', 'Verdana';
+
+before,
+after 
+    margin: 50px;
+    padding: 25px;;
     box-sizing: border-box;
+
 }
-body{
-    background: var(--cor-acento);
+
+#menu-principal {
+    color: rgb(63, 88, 13);
+  font-size: 35px;
+  font-weight: bold;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+} 
