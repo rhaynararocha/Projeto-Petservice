@@ -1,35 +1,108 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  text-align: center;
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --verde-principal: #4CAF50;
+    --verde-escuro: #2E7D32;
+    --verde-claro: #E8F5E9;
+    --branco: #ffffff;
+    --texto: #333333;
+    --sombra: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-h2 {
-  margin-top: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-table {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 60%;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4fff6, #dff5e4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    color: var(--texto);
 }
 
-th, td {
-  padding: 12px;
-  border: 1px solid #ccc;
+/* Título */
+
+h2{
+    color: var(--verde-escuro);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-th {
-  background-color: #4CAF50;
-  color: white;
+/* Tabela */
+
+table{
+    width: 100%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Cabeçalho */
+
+th{
+    background: var(--verde-principal);
+    color: white;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-tr:hover {
-  background-color: #f1f1f1;
+/* Células */
+
+td{
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+    transition: 0.3s;
+}
+
+/* Última linha */
+
+tr:last-child td{
+    border-bottom: none;
+}
+
+/* Hover */
+
+tbody tr:hover{
+    background: #f7fff8;
+    transform: scale(1.01);
+}
+
+/* Primeira coluna */
+
+td:first-child{
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+/* Responsividade */
+
+@media(max-width: 768px){
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td{
+        padding: 12px;
+    }
 }

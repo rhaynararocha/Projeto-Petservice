@@ -1,112 +1,195 @@
-/* Reset básico */
-* {
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --verde-principal: #4CAF50;
+    --verde-escuro: #2E7D32;
+    --verde-claro: #E8F5E9;
+    --fundo: #f4fff6;
+    --branco: #ffffff;
+    --texto: #333333;
+    --sombra: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    padding: 20px;
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4fff6, #dff5e4);
+    color: var(--texto);
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
 /* Títulos */
-h1 {
+
+h1{
     text-align: center;
-    color: #333;
+    color: var(--verde-escuro);
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
-h2 {
+h2{
     text-align: center;
     color: #555;
-    margin-bottom: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 /* Formulário */
-form {
-    background-color: #fff;
-    max-width: 480px;
-    margin: 0 auto 50px auto;
-    padding: 20px;
-    border-radius: 8px;
+
+#formCadastro{
+    max-width: 650px;
+    margin: auto;
+    background: var(--branco);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
 }
 
-/* Campos */
-p {
-    margin-bottom: 15px;
+#formCadastro p{
+    margin-bottom: 18px;
 }
 
-label {
+label{
     display: block;
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--verde-escuro);
 }
 
-input {
+input{
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border: 2px solid #d6e9d9;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 10px rgba(76,175,80,0.2);
 }
 
 /* Botões */
-button {
-    padding: 10px 15px;
-    margin-right: 10px;
+
+button{
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
 }
 
-/* Botão cadastrar */
-button[type="submit"] {
-    background-color: #4CAF50;
+button[type="submit"]{
+    background: var(--verde-principal);
     color: white;
 }
 
-/* Botão limpar */
-button[type="reset"] {
-    background-color: #ccc;
+button[type="submit"]:hover{
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
-/* Hover */
-button:hover {
-    opacity: 0.9;
+button[type="reset"]{
+    background: #eeeeee;
+    color: #555;
 }
 
-/* Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    max-width: 800px;
+button[type="reset"]:hover{
+    background: #dddddd;
+    transform: translateY(-2px);
+}
+
+/* Separador */
+
+hr{
+    border: none;
+    height: 2px;
+    background: #dfeee2;
+    margin: 50px auto 30px;
+    max-width: 1000px;
+}
+
+/* Área da tabela */
+
+#usuários\ cadastrados{
+    max-width: 1000px;
     margin: auto;
 }
 
-/* Cabeçalho */
-th {
-    background-color: #4CAF50;
+#usuários\ cadastrados h2{
+    margin-bottom: 20px;
+}
+
+/* Tabela */
+
+#tabelaUsuarios{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+#tabelaUsuarios th{
+    background: var(--verde-principal);
     color: white;
-    padding: 19px;
+    padding: 15px;
+    text-align: left;
 }
 
-/* Células */
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
+#tabelaUsuarios td{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
 }
 
-/* Linhas alternadas */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+#tabelaUsuarios tr:last-child td{
+    border-bottom: none;
 }
 
-/* Linha ao passar o mouse */
-tr:hover {
-    background-color: #f1f1f1;
+#tabelaUsuarios tr:hover{
+    background: #f7fff8;
+}
+
+/* Ações */
+
+#tabelaUsuarios td:last-child{
+    color: var(--verde-escuro);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Responsivo */
+
+@media(max-width:768px){
+
+    h1{
+        font-size: 2rem;
+    }
+
+    #formCadastro{
+        padding: 25px;
+    }
+
+    #tabelaUsuarios{
+        display: block;
+        overflow-x: auto;
+    }
+
+    button{
+        width: 100%;
+        margin: 5px 0;
+    }
 }

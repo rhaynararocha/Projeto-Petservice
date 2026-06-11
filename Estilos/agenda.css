@@ -1,57 +1,122 @@
-/* Configurações Gerais */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f7f5;
+/* Fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --verde-principal: #4CAF50;
+    --verde-escuro: #2E7D32;
+    --verde-claro: #E8F5E9;
+    --branco: #ffffff;
+    --texto: #333333;
+    --sombra: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4fff6, #dff5e4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    color: #b7b933;
 }
 
-h2 {
-    color: #4a7a5d;
+/* Cartão principal */
+
+form{
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 550px;
 }
 
-/* Estilização dos Rótulos (Labels) */
-label {
-    font-weight: bold;
-    color: #4a7a5d;
+/* Título */
+
+h2{
+    position: absolute;
+    top: 50px;
+    text-align: center;
+    width: 100%;
+    color: var(--verde-escuro);
+    font-size: 2rem;
+    font-weight: 600;
 }
 
-/* Estilização dos Campos (Input e Select) */
-input, select {
-    width: 50%;
-    padding: 8px; /* Ajustado para melhor respiro */
-    border: px solid #68a581;
-    border-radius: 5px;
+/* Campos */
+
+p{
+    margin-bottom: 18px;
+}
+
+label{
+    display: block;
+    margin-bottom: 6px;
+    color: var(--verde-escuro);
+    font-weight: 500;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #d6e9d9;
+    border-radius: 12px;
     font-size: 1rem;
-    background-color: rgb(138, 196, 171);
-    color: #1d3528; /* Cor do texto interna */
-    margin-top: 5px;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus{
     outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 10px rgba(76,175,80,0.2);
 }
 
-/* Efeito ao clicar no campo */
-input:focus, select:focus {
-    background-color: #a5dac4;
-    border-color: #4a7a5d;
-}
+/* Botão */
 
-/* Estilização do Botão */
-button {
-    background-color: #68a581;
+button{
+    width: 100%;
+    padding: 14px;
+    background: var(--verde-principal);
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 12px;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #345e45;
+button:hover{
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46,125,50,0.25);
 }
 
-  
-    
- 
+button:active{
+    transform: scale(0.98);
+}
+
+/* Responsivo */
+
+@media (max-width: 600px){
+
+    h2{
+        font-size: 1.6rem;
+        top: 30px;
+        padding: 0 15px;
+    }
+
+    form{
+        padding: 25px;
+        margin-top: 50px;
+    }
+}
